@@ -46,10 +46,16 @@ export const GithubProvider = ({children}) => {
 
     }
 
+    // Clear users
+    const clearUserState = () => dispatch({
+        type: 'CLEAR_USERS'
+    })
+
     return <GithubContext.Provider value={{
         users: state.users,
         loading: state.loading,
-        searchUsers
+        searchUsers,
+        clearUserState
     }}>
         {children}
     </GithubContext.Provider>

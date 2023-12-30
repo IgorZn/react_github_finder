@@ -48,6 +48,7 @@ export const GithubProvider = ({children}) => {
     // Get search results for single user
     const searchUser = async (login) => {
         setLoading()
+        console.log(`${GITHUB_API_URL}/users/${login}`)
         const response = await fetch(`${GITHUB_API_URL}/users/${login}`, {
             headers: {
                 Authorization: `Bearer ${GITHUB_TOKEN}`

@@ -66,6 +66,84 @@ function User() {
                                     </a>
                                 </div>
                             </div>
+
+                            <div className="w-full rounded-lg shadow-mb bg-base-100 stats">
+                                {location && (
+                                    <div className="stat">
+                                        <div className="stat-title text-md">Location</div>
+                                        <div className="text-lg stat-value">{location}</div>
+                                    </div>
+                                )}
+                                {blog && (
+                                    <div className="stat">
+                                        <div className="stat-title text-md">Website</div>
+                                        <div className="text-lg stat-value">
+                                            <a href={`https://${blog}`} target="_black">Blog</a>
+                                        </div>
+                                    </div>
+                                )}
+                                {twitter_username && (
+                                    <div className="stat">
+                                        <div className="stat-title text-md">Twitter</div>
+                                        <div className="text-lg stat-value">
+                                            <a href={`https://twitter.com/${twitter_username}`} target="_black">Blog</a>
+                                        </div>
+                                    </div>
+                                )}
+                            </div>
+                        </div>
+                    </div>
+                    <div className="w-full py-5 mb-6 rounded-lg shadow-md bg-base-100 stats">
+                        {/* Following */}
+                        <div className="stat">
+                            <div className="stat-figure text-secondary">
+                                <FaUsers className={'text-3xl md:text-5xl'} />
+                            </div>
+                            <div className="stat-title pr-5">
+                                Following
+                            </div>
+                            <div className="stat-value pr-5 text-3xl md:text-4xl">
+                                {followers}
+                            </div>
+                        </div>
+
+                        {/* Followers */}
+                        <div className="stat">
+                            <div className="stat-figure text-secondary">
+                                <FaUserFriends className={'text-3xl md:text-5xl'} />
+                            </div>
+                            <div className="stat-title pr-5">
+                                Followers
+                            </div>
+                            <div className="stat-value pr-5 text-3xl md:text-4xl">
+                                {following}
+                            </div>
+                        </div>
+
+                        {/* Public repos */}
+                        <div className="stat">
+                            <div className="stat-figure text-secondary">
+                                <FaCodepen className={'text-3xl md:text-5xl'} />
+                            </div>
+                            <div className="stat-title pr-5">
+                                Public repos
+                            </div>
+                            <div className="stat-value pr-5 text-3xl md:text-4xl">
+                                {public_repos}
+                            </div>
+                        </div>
+
+                        {/* Public Gits */}
+                        <div className="stat">
+                            <div className="stat-figure text-secondary">
+                                <FaStore className={'text-3xl md:text-5xl'} />
+                            </div>
+                            <div className="stat-title pr-5">
+                                Public Gits
+                            </div>
+                            <div className="stat-value pr-5 text-3xl md:text-4xl">
+                                {public_gists}
+                            </div>
                         </div>
                     </div>
                 </div>
